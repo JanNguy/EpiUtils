@@ -1,0 +1,101 @@
+/*2025 EPITECH HUB JAN NGUYEN */
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    color: #4f4fe8;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.button:active {
+    background-color: #2471a3;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+section div {
+    width: 300px;
+    height: auto;
+    margin: 0 10px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.links {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.links:hover {
+    color: #4668b3;
+    text-decoration: underline;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    transform: translateX(-20px);
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+li p {
+    margin-left: 10px;
+    text-wrap: nowrap;
+}
+
+#mainSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    min-width: 250px;
+}
