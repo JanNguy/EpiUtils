@@ -26,14 +26,16 @@ const config = {
         text_gray_dark: ["#595959", "#959595"],
         text: ["#000000", "#ffffff"],
         text_accent: ["#006d9f", "#0091d3"],
-        bg_contrast: ["#1f485e", "#003b57"],
-        bg_accent: ["#c6dff3", "#016593"],
-        bg_light: ["#efefef", "#ffffff"],
+        bg_contrast: ["#94c8ff", "#003b57"],
+        bg_accent: ["#3396ff", "#016593"],
+        bg_light: ["#ffffff", "#ffffff"],
         bg: ["#ffffff", "#1d222b"],
         border_accent: ["#0084c1", "#0084c1"],
         border: ["#dbdbdb", "#424242"],
         misc_bar_completed: ["#efaf16", "#ff8800"],
-        misc_bar_remaining: ["#4fa8d4", "#707070"]
+        misc_bar_remaining: ["#d9d9d9", "#707070"],
+        icon_flat_invert: ["0%", "100%"],
+        icon_flat: ["100%", "0%"]
     },
     colors_labels: {
         background: {
@@ -56,17 +58,6 @@ const config = {
             border: ["#dbdbdb"]
         }
     }
-}
-
-/** Returns the appropriate CSS attribute to look for */
-function getCSSAttribute(attr) {
-    if (attr === "background")
-        return ["background", "background-color"];
-    if (attr === "color")
-        return ["color"];
-    if (attr === "border")
-        return ["border", "border-color"];
-    return [];
 }
 
 function rgbToHex(rgbString) {

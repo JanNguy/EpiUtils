@@ -21,18 +21,38 @@ function initDebugGUI() {
     });
 }
 
-function imageIconColoring() {
+function configIconColoring() {
     if (!config.image_icon_coloring)
         return;
 
     const icons = document.querySelectorAll(".icon");
+    const contrastIconsLabels = [
+        "Mes modules",
+        "Mes notes",
+        "Mon planning",
+        "Trombi",
+        "Stage",
+        "Documents",
+        "Units",
+        "Marks",
+        "My schedule",
+        "Yearbook",
+        "Internship",
+        "Documents"
+    ];
 
     for (let i = 0; i < icons.length; i++) {
-        const icon = icons.item(i);
+        const entry = icons.item(i).parentElement;
+        const icon = entry.children.item(0);
+        const label = entry.children.item(1);
 
+        if (!icon || !label)
+            continue;
         icon.style.setProperty(
             "filter",
-            config.light_mode ? "invert(0%)" : "invert(100%)"
+            `invert(var(--${contrastIconsLabels.indexOf(label.innerText) > -1 ?
+                "icon_flat" : "icon_flat_invert"
+            }))`
         );
     }
 }
@@ -47,9 +67,14 @@ function updateTheme() {
             ]
         );
     });
-    imageIconColoring();
+    configIconColoring();
 }
 
+document.getElementById("footer").style.setProperty(
+    "background-color",
+    "var(--bg_contrast)"
+);
+configIconColoring();
 updateTheme();
 
 matchMedia("(prefers-color-scheme: light)").addEventListener("change", ev => {
