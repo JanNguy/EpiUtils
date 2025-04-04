@@ -8,7 +8,8 @@
     },
     "content_scripts": [
         {
-            "js": [ 
+            "js": [
+                "scripts/lil-gui.js",
                 "scripts/config.js",
                 "scripts/overhaul.js" 
             ],
