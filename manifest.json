@@ -1,0 +1,24 @@
+{
+  "name": "EpiParser",
+  "description": "Parser pour le planning d'Epitech",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://intra.epitech.eu/*"
+  ],
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "img/hello_extensions.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["script/content.js"],
+      "matches": ["https://intra.epitech.eu/*"]
+    }
+  ]
+}
